@@ -1,12 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>To Do List</title>
 </head>
 <body>
-    asdasdsdsdsd
+  <div class="mainTitle">To Do List</div>
+  
+  <form action="" class="addToDo">
+    <input type="text" class="addToDoInfo">
+    <button class="addToDoBtn">추가</button>
+  </form>
+
+  <table class="toDoTable">
+    <colgroup>
+      <col witdh="10%">
+      <col witdh="90%">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>check</th>
+        <th>ToDoList</th>
+      </tr>
+    </thead>
+    <tbody class="tableBody">
+      <tr>
+        <td><input type="checkbox" class="checkBtn"></td>
+        <td>청소하기</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="checkBtn"></td>
+        <td>숙제하기</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="removeBtnArea">
+    <button class="remove1">선택 삭제</button>
+    <button class="remove2">전체 삭제</button>
+  </div>
 </body>
 </html>
