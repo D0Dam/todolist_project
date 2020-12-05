@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=Gamja+Flower" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
+  <script type="text/javascript" src="./todo.js" async></script>
   <title>To Do List</title>
 </head>
 <body>
@@ -14,10 +15,10 @@
     <div class="mainTitle">To Do List</div>
     
     <!--투두리스트를 추가폼-->
-    <form action="" class="addToDo">
+    <div class="addToDo">
       <input type="text" class="addToDoInfo">
-      <button class="addToDoBtn">추가</button>
-    </form>
+      <button type="button" id="addToDoBtn">추가</button>
+    </div>
 
     <!--투두리스트 테이블-->
     <table class="toDoTable">
@@ -28,7 +29,7 @@
       <thead>
         <tr><th>check</th><th>ToDoList</th></tr>
       </thead>
-      <tbody class="tableBody">
+      <tbody id="tableBody">
         <tr><td><input type="checkbox" class="checkBtn"></td><td>청소하기</td></tr>
         <tr><td><input type="checkbox" class="checkBtn"></td><td>숙제하기</td></tr>
       </tbody>

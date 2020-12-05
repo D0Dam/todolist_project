@@ -43,7 +43,7 @@ button{
     height: 100%;
     width: 80%;
 }
-.addToDo .addToDoBtn{
+.addToDo #addToDoBtn{
     display: flex;
     justify-content: center;
     height: 100%;
