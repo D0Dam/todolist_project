@@ -1,0 +1,82 @@
+body{
+    margin:0;
+    padding:0;
+    background-color: #333;
+    font-family: 'Gamja Flower';
+}
+
+button{
+    font-family: 'Gamja Flower';
+    border: none;
+    font-size: 18px;
+    font-weight: 550;
+    cursor: pointer;
+    color:#fff;
+    background-color:#a369af;
+}
+
+.mainTitle{
+    display: flex;
+    justify-content: center;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 48px;
+    padding-top: 36px;
+    padding-bottom: 48px;
+    border-bottom: 2px solid #87898f;
+    font-size: 48px;
+    font-weight: 700;
+    color: #9fd6c2;
+}
+
+.addToDo{
+    display: flex;
+    justify-content: center;
+    height: 36px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 24px;
+}
+.addToDo .addToDoInfo{
+    border:none;
+    padding: 0;
+    height: 100%;
+    width: 80%;
+}
+.addToDo .addToDoBtn{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 96px;
+}
+
+.toDoTable{
+    border-collapse: collapse;
+    border-spacing:0px;
+    width: 80%;
+    margin: 12px 10%;
+}
+th, td{
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-align: center;
+}
+.toDoTable th{
+    background-color: #9fd6c2;
+}
+.toDoTable td{
+    color: #fff;
+}
+tbody td:first-child{
+    text-align: center;
+}
+
+.removeBtnArea{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.removeBtnArea .remove1,.removeBtnArea .remove2{
+    margin: 8px;
+}
