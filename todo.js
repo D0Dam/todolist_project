@@ -24,4 +24,9 @@ function addList(){
   document.getElementById('tableBody').appendChild(tr);
   contents.value='';
   contents.focus();
+  localStorage['table'] = document.querySelector('.toDoTable').innerHTML;
+}
+
+if(localStorage['table']){
+  document.querySelector('.toDoTable').innerHTML = localStorage['table'];
 }
