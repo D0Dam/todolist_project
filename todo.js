@@ -41,4 +41,10 @@ function removeSelected() {
       body.removeChild(checkbox[i].parentNode.parentNode);
     }
   }
+  localStorage['table'] = document.querySelector('.toDoTable').innerHTML;
+}
+
+function removeAll() {
+  document.querySelector('#tableBody').innerHTML='';
+  localStorage['table'] = '';
 }
