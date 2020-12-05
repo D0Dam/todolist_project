@@ -77,6 +77,6 @@ tbody td:first-child{
     justify-content: center;
     width: 100%;
 }
-.removeBtnArea .remove1,.removeBtnArea .remove2{
+.removeBtnArea #remove1,.removeBtnArea #remove2{
     margin: 8px;
 }

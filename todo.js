@@ -1,4 +1,6 @@
 document.getElementById('addToDoBtn').addEventListener('click', addList);
+document.getElementById('remove1').addEventListener('click', removeSelected);
+document.getElementById('remove2').addEventListener('click', removeAll);
 
 function addList(){
   let contents=document.querySelector('.addToDoInfo');
@@ -29,4 +31,14 @@ function addList(){
 
 if(localStorage['table']){
   document.querySelector('.toDoTable').innerHTML = localStorage['table'];
+}
+
+function removeSelected() {
+  let body = document.getElementById('tableBody');
+  let checkbox = document.querySelectorAll('#tableBody .checkBtn');
+  for(let i in checkbox) {
+    if(checkbox[i].nodeType == 1 && checkbox[i].checked ==true){
+      body.removeChild(checkbox[i].parentNode.parentNode);
+    }
+  }
 }
