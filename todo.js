@@ -1,50 +1,32 @@
-document.getElementById('addToDoBtn').addEventListener('click', addList);
-document.getElementById('remove1').addEventListener('click', removeSelected);
-document.getElementById('remove2').addEventListener('click', removeAll);
+ let i = j = 0;
 
-function addList(){
-  let contents=document.querySelector('.addToDoInfo');
-  if(!contents.value) {
-    alert('내용을 입력해주세요.');
-    contents.focus();
+
+function addActiveList() {
+    console.log(i);
+    let todovalue = document.querySelector(".addToDoInfo").value;
+    let li = document.createElement("li");
+    let button = document.createElement("button");
+    button.className = "doneBtn" + i;
+    li.innerHTML = todovalue;
+    button.innerHTML = "Done";
+    li.appendChild(button);
+    document.querySelector(".listActive").appendChild(li);
+    document.querySelector(".doneBtn"+i).addEventListener('click', doneActive);
+    document.querySelector(".addToDoInfo").value = '';
+    i++;
+    console.log(i);
     return false;
-  }
-
-  let tr = document.createElement('tr');
-  let input = document.createElement('input');
-  input.setAttribute('type', 'checkbox');
-  input.setAttribute('class', 'checkBtn');
-
-  let td01 = document.createElement('td');
-  td01.appendChild(input);
-  tr.appendChild(td01);
-
-  let td02 = document.createElement('td');
-  td02.innerHTML = contents.value;
-  tr.appendChild(td02);
-
-  document.getElementById('tableBody').appendChild(tr);
-  contents.value='';
-  contents.focus();
-  localStorage['table'] = document.querySelector('.toDoTable').innerHTML;
 }
 
-if(localStorage['table']){
-  document.querySelector('.toDoTable').innerHTML = localStorage['table'];
+function doneActive() {;
+    let content = this.parentNode;
+    this.innerHTML = "delete";
+    this.className = "deleteBtn" + j;
+    document.querySelector(".deleteBtn"+j).addEventListener('click', deleteDone);
+    j++;
+    document.querySelector(".listDone").appendChild(content);
 }
 
-function removeSelected() {
-  let body = document.getElementById('tableBody');
-  let checkbox = document.querySelectorAll('#tableBody .checkBtn');
-  for(let i in checkbox) {
-    if(checkbox[i].nodeType == 1 && checkbox[i].checked ==true){
-      body.removeChild(checkbox[i].parentNode.parentNode);
-    }
-  }
-  localStorage['table'] = document.querySelector('.toDoTable').innerHTML;
-}
-
-function removeAll() {
-  document.querySelector('#tableBody').innerHTML='';
-  localStorage['table'] = '';
+function deleteDone() {
+    this.parentNode.parentNode.removeChild(this.parentNode);
 }

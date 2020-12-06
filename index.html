@@ -1,42 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Gamja+Flower" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
-  <link rel="stylesheet" href="index.css">
-  <title>To Do List</title>
-</head>
-<body>
-    <!--투두 리스트 제목-->
-    <div class="mainTitle">To Do List</div>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>ToDoList</title>
+  </head>
+  <body>
+    <!--주 제목-->
+    <div class="mainTitle">ToDoList</div>
+  
+    <!--할일 정보 입력하는 곳-->
+    <form action="#" class="addToDo" onsubmit="return addActiveList();">
+    <input type="text" class="addToDoInfo" placeholder="Enter your to-do">
+    </form>
     
-    <!--투두리스트를 추가폼-->
-    <div class="addToDo">
-      <input type="text" class="addToDoInfo">
-      <button type="button" id="addToDoBtn">추가</button>
-    </div>
+    <!--투두리스트-->
+    <div class="list">
+      <!--투두리스트Active-->
+      <div class="activeToDo">
+        <div class="activeTitle">Active</div>
+        <ul type="none" class="listActive">
+        </ul>
+      </div>
 
-    <!--투두리스트 테이블-->
-    <table class="toDoTable">
-      <colgroup>
-        <col width="10%">
-        <col width="90%">
-      </colgroup>
-      <thead>
-        <tr><th>check</th><th>ToDoList</th></tr>
-      </thead>
-      <tbody id="tableBody">
-      </tbody>
-    </table>
-
-    <!--리스트삭제버튼 모음-->
-    <div class="removeBtnArea">
-      <button type="button" id="remove1">선택 삭제</button>
-      <button type="button" id="remove2">전체 삭제</button>
+      <!--투두리스트Done-->
+      <div class="doneToDo">
+        <div class="doneTitle">Done</div>
+        <ul type="none" class="listDone">
+        </ul>
+      </div>
     </div>
-    <script type="text/javascript" src="./todo.js" async></script>
-</body>
+  </body>
+  <script type="text/javascript" src="todo.js"></script>
 </html>
