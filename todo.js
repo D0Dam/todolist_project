@@ -2,7 +2,6 @@
 
 
 function addActiveList() {
-    console.log(i);
     let todovalue = document.querySelector(".addToDoInfo").value;
     let li = document.createElement("li");
     let button = document.createElement("button");
@@ -14,7 +13,6 @@ function addActiveList() {
     document.querySelector(".doneBtn"+i).addEventListener('click', doneActive);
     document.querySelector(".addToDoInfo").value = '';
     i++;
-    console.log(i);
     return false;
 }
 

@@ -62,7 +62,7 @@ body {
 }
 .list .activeTitle, .list .doneTitle {
     padding: 6px;
-    border-bottom: 2px solid var(--line-color);
+    border-bottom: 4px solid var(--line-color);
 }
 .list ul {
     padding:0;
@@ -72,7 +72,7 @@ body {
     display: flex;
     justify-content: space-between;
     text-align: center;
-    width: 200px;
+    width: auto;
     margin:8px;
     padding: 6px;
     border-bottom: 2px solid var(--line-color);
@@ -82,4 +82,5 @@ body {
     background-color: var(--line-color);
     font-family: var(--font);
     padding: 4px 6px;
+    margin-left: 12px;
 }
